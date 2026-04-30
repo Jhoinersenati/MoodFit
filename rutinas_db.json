@@ -1,0 +1,382 @@
+[
+  {
+    "id": 1,
+    "estado_animo": "triste",
+    "nombre_ejercicio": "Saltos de Tijera",
+    "instrucciones": "Salta suavemente para activar el cuerpo.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/nuevos_saltos.mp4",
+    "url_musica": "/musica/piano.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 2,
+    "estado_animo": "triste",
+    "nombre_ejercicio": "Estiramiento Cobra",
+    "instrucciones": "Abre el pecho y respira profundo.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/triste_cobra.mp4",
+    "url_musica": "/musica/piano1.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 3,
+    "estado_animo": "triste",
+    "nombre_ejercicio": "Caminata Suave",
+    "instrucciones": "Camina en tu sitio elevando rodillas.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/triste_caminata.mp4",
+    "url_musica": "/musica/piano2.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 4,
+    "estado_animo": "triste",
+    "nombre_ejercicio": "Pose del Niño",
+    "instrucciones": "Descansa frente al suelo y relájate.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/triste_nino.mp4",
+    "url_musica": "/musica/piano3.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 5,
+    "estado_animo": "cansado",
+    "nombre_ejercicio": "Rotación de Cuello",
+    "instrucciones": "Gira la cabeza suavemente.",
+    "duracion_segundos": 40,
+    "url_video": "/videos/cansado_cuello.mp4",
+    "url_musica": "/musica/relax.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 6,
+    "estado_animo": "cansado",
+    "nombre_ejercicio": "Estiramiento Brazos",
+    "instrucciones": "Cruza los brazos y estira la espalda.",
+    "duracion_segundos": 30,
+    "url_video": "/videos/cansado_brazos.mp4",
+    "url_musica": "/musica/relax1.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 7,
+    "estado_animo": "cansado",
+    "nombre_ejercicio": "Sentadillas Suaves",
+    "instrucciones": "Activa las piernas para despertar.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/cansado_sentadilla.mp4",
+    "url_musica": "/musica/relax2.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 8,
+    "estado_animo": "cansado",
+    "nombre_ejercicio": "Saltos Pequeños",
+    "instrucciones": "Rebota sin despegarte mucho del suelo.",
+    "duracion_segundos": 30,
+    "url_video": "/videos/cansado_saltos.mp4",
+    "url_musica": "/musica/relax3.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 9,
+    "estado_animo": "estresado",
+    "nombre_ejercicio": "Boxeo de Sombra",
+    "instrucciones": "Golpea el aire y libera tensión.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/estresado_boxeo.mp4",
+    "url_musica": "/musica/relax4.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 10,
+    "estado_animo": "estresado",
+    "nombre_ejercicio": "Burpees Lentos",
+    "instrucciones": "Baja al suelo y levántate despacio.",
+    "duracion_segundos": 50,
+    "url_video": "/videos/estresado_burpees.mp4",
+    "url_musica": "/musica/relax5.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 11,
+    "estado_animo": "estresado",
+    "nombre_ejercicio": "Patadas Frontales",
+    "instrucciones": "Lanza patadas al aire para soltar piernas.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/estresado_patadas.mp4",
+    "url_musica": "/musica/relax6.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 12,
+    "estado_animo": "estresado",
+    "nombre_ejercicio": "Respiración Profunda",
+    "instrucciones": "Inhala 4 seg, mantén 4, exhala 4.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/estresado_aire.mp4",
+    "url_musica": "/musica/relax7.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 13,
+    "estado_animo": "enojado",
+    "nombre_ejercicio": "Sprint en Sitio",
+    "instrucciones": "Corre lo más rápido que puedas.",
+    "duracion_segundos": 40,
+    "url_video": "/videos/enojado_sprint.mp4",
+    "url_musica": "/musica/rock.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 14,
+    "estado_animo": "enojado",
+    "nombre_ejercicio": "Flexiones",
+    "instrucciones": "Usa la rabia para empujar el suelo.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/enojado_flexiones.mp4",
+    "url_musica": "/musica/rock1.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 15,
+    "estado_animo": "enojado",
+    "nombre_ejercicio": "Salto Cuerda",
+    "instrucciones": "Coordina y salta rápido para olvidar el enojo.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/enojado_cuerda.mp4",
+    "url_musica": "/musica/rock2.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 16,
+    "estado_animo": "enojado",
+    "nombre_ejercicio": "Plancha",
+    "instrucciones": "Aguanta la tensión en el abdomen.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/enojado_plancha.mp4",
+    "url_musica": "/musica/rock3.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 17,
+    "estado_animo": "alegre",
+    "nombre_ejercicio": "Baile Libre",
+    "instrucciones": "Muévete como quieras, ¡disfruta!",
+    "duracion_segundos": 60,
+    "url_video": "/videos/alegre_baile.mp4",
+    "url_musica": "/musica/pop.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 18,
+    "estado_animo": "alegre",
+    "nombre_ejercicio": "Zancadas",
+    "instrucciones": "Pasos largos hacia adelante.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/alegre_zancadas.mp4",
+    "url_musica": "/musica/pop1.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 19,
+    "estado_animo": "alegre",
+    "nombre_ejercicio": "Escaladores",
+    "instrucciones": "Corre en posición de plancha.",
+    "duracion_segundos": 40,
+    "url_video": "/videos/alegre_escaladores.mp4",
+    "url_musica": "/musica/pop2.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 20,
+    "estado_animo": "alegre",
+    "nombre_ejercicio": "Saltos Estrella",
+    "instrucciones": "Salta y ábrete como una estrella.",
+    "duracion_segundos": 30,
+    "url_video": "/videos/alegre_estrella.mp4",
+    "url_musica": "/musica/pop3.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 21,
+    "estado_animo": "emocionado",
+    "nombre_ejercicio": "Burpees Rápidos",
+    "instrucciones": "Cansate de verdad con saltos.",
+    "duracion_segundos": 50,
+    "url_video": "/videos/emocionado_burpees.mp4",
+    "url_musica": "/musica/pop4.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 22,
+    "estado_animo": "emocionado",
+    "nombre_ejercicio": "Saltos al Cajón",
+    "instrucciones": "Sube y baja de una superficie estable.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/emocionado_cajon.mp4",
+    "url_musica": "/musica/pop5.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 23,
+    "estado_animo": "emocionado",
+    "nombre_ejercicio": "Sentadillas Salto",
+    "instrucciones": "Baja y explota hacia arriba.",
+    "duracion_segundos": 40,
+    "url_video": "/videos/emocionado_sentadilla.mp4",
+    "url_musica": "/musica/pop6.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 24,
+    "estado_animo": "emocionado",
+    "nombre_ejercicio": "Abdominales",
+    "instrucciones": "Rápido, codo a rodilla contraria.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/emocionado_abs.mp4",
+    "url_musica": "/musica/pop7.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 25,
+    "estado_animo": "aburrido",
+    "nombre_ejercicio": "Silla Isométrica",
+    "instrucciones": "Siéntate en la pared y aguanta.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/aburrido_silla.mp4",
+    "url_musica": "/musica/pop8.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 26,
+    "estado_animo": "aburrido",
+    "nombre_ejercicio": "Plancha Lateral",
+    "instrucciones": "Ponte de lado y levanta cadera.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/aburrido_plancha.mp4",
+    "url_musica": "/musica/pop9.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 27,
+    "estado_animo": "aburrido",
+    "nombre_ejercicio": "Flexiones Diamante",
+    "instrucciones": "Junta las manos y baja.",
+    "duracion_segundos": 40,
+    "url_video": "/videos/aburrido_diamante.mp4",
+    "url_musica": "/musica/pop10.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 28,
+    "estado_animo": "aburrido",
+    "nombre_ejercicio": "Estiramiento",
+    "instrucciones": "Toca la punta de tus pies.",
+    "duracion_segundos": 50,
+    "url_video": "/videos/aburrido_estirar.mp4",
+    "url_musica": "/musica/pop11.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 29,
+    "estado_animo": "ansioso",
+    "nombre_ejercicio": "Respiración Cuadrada",
+    "instrucciones": "Controla tu aire para calmarte.",
+    "duracion_segundos": 120,
+    "url_video": "/videos/ansioso_respirar.mp4",
+    "url_musica": "/musica/piano4.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 30,
+    "estado_animo": "ansioso",
+    "nombre_ejercicio": "Pose del Árbol",
+    "instrucciones": "Equilibrio en un pie. Enfócate.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/ansioso_arbol.mp4",
+    "url_musica": "/musica/piano5.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 31,
+    "estado_animo": "ansioso",
+    "nombre_ejercicio": "Gato - Vaca",
+    "instrucciones": "Arquea la espalda suavemente.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/ansioso_gato.mp4",
+    "url_musica": "/musica/piano6.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 32,
+    "estado_animo": "ansioso",
+    "nombre_ejercicio": "Masaje Sienes",
+    "instrucciones": "Cierra los ojos y masajea tu cabeza.",
+    "duracion_segundos": 30,
+    "url_video": "/videos/ansioso_masaje.mp4",
+    "url_musica": "/musica/piano7.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 33,
+    "estado_animo": "energico",
+    "nombre_ejercicio": "Sprint y Freno",
+    "instrucciones": "Corre rápido 5 seg, para en seco.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/energico_sprintt.mp4",
+    "url_musica": "/musica/rock4.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 34,
+    "estado_animo": "energico",
+    "nombre_ejercicio": "Flexiones Palmada",
+    "instrucciones": "Impúlsate fuerte y aplaude.",
+    "duracion_segundos": 30,
+    "url_video": "/videos/energico_flexion.mp4",
+    "url_musica": "/musica/rock5.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 35,
+    "estado_animo": "energico",
+    "nombre_ejercicio": "Zancadas Salto",
+    "instrucciones": "Cambia de pierna en el aire.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/energico_zancada.mp4",
+    "url_musica": "/musica/rock6.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 36,
+    "estado_animo": "inseguro",
+    "nombre_ejercicio": "Pose Superman",
+    "instrucciones": "Túmbate y vuela. Siéntete fuerte.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/inseguro_superman.mp4",
+    "url_musica": "/musica/rock7.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 37,
+    "estado_animo": "inseguro",
+    "nombre_ejercicio": "Guerrero",
+    "instrucciones": "Pierna adelante, brazos al cielo.",
+    "duracion_segundos": 60,
+    "url_video": "/videos/inseguro_guerrero.mp4",
+    "url_musica": "/musica/rock8.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  },
+  {
+    "id": 38,
+    "estado_animo": "inseguro",
+    "nombre_ejercicio": "Golpes Poder",
+    "instrucciones": "Plántate firme y lanza puños.",
+    "duracion_segundos": 45,
+    "url_video": "/videos/inseguro_golpes.mp4",
+    "url_musica": "/musica/rock9.mp3",
+    "created_at": "2026-04-28T13:22:13.609701+00:00"
+  }
+]

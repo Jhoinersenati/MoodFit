@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { AthleteProfile } from '../components/AthleteProfile';
+---
+
+<Layout title="Mi Perfil - Bio-Entrenador">
+  <main class="min-h-screen relative pb-20 font-sans pt-8 sm:pt-12 overflow-hidden flex justify-center items-start">
+    
+    {/* Fondo Premium (Matching Home Page) */}
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80" 
+        alt="Wellness Background" 
+        class="w-full h-full object-cover object-center opacity-30"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-orange-100/80 via-white/90 to-slate-100/90 backdrop-blur-[2px]"></div>
+    </div>
+
+    {/* Contenido Principal */}
+    <div class="w-full px-4 relative z-10">
+      <AthleteProfile client:only="react" />
+    </div>
+  </main>
+</Layout>

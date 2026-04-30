@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Auth } from '../components/Auth';
+---
+
+<Layout title="Iniciar Sesión - Bio-Entrenador IA">
+  <main class="min-h-screen bg-slate-900 bg-[url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
+    <div class="relative z-10 w-full flex justify-center animate-in slide-in-from-bottom-8 duration-700">
+      <Auth client:load />
+    </div>
+  </main>
+</Layout>

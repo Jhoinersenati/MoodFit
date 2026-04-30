@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { supabase } from '../lib/supabase';
+
+// Fetch coaches from Supabase
+const { data: coaches, error } = await supabase
+  .from('perfiles')
+  .select('*')
+  .eq('rol', 'coach');
+
+const mockCoaches = coaches?.length ? coaches : [
+  { id: 'mock-1', nombre: 'Carlos Ruiz', especialidad: 'Entrenamiento de Fuerza & Hipertrofia', precio_mensual: 49.99 },
+  { id: 'mock-2', nombre: 'Valeria Gómez', especialidad: 'Yoga, Pilates y Movilidad', precio_mensual: 39.99 },
+  { id: 'mock-3', nombre: 'Alejandro fitness', especialidad: 'Pérdida de Grasa y HIIT', precio_mensual: 55.00 }
+];
+---
+
+<Layout title="Encuentra tu Coach - Bio-Entrenador IA">
+  <main class="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      {/* Botón de retroceso */}
+      <a href="/" class="absolute top-6 left-6 flex items-center gap-2 text-slate-500 font-bold hover:text-blue-600 transition-colors bg-white px-4 py-2 rounded-full shadow-md border border-slate-100 hover:-translate-x-1">
+        <span class="text-xl">←</span>
+        Volver a Rutinas
+      </a>
+
+      <div class="text-center mb-16 mt-8">
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          Eleva tu nivel con un <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Coach Personal</span>
+        </h1>
+        <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+          No entrenes solo. Contrata a un experto que guíe tus rutinas, monitoree tu progreso y te lleve al siguiente nivel.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {mockCoaches.map((coach) => (
+          <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 flex flex-col">
+            <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center mb-6 text-2xl font-black text-indigo-500 overflow-hidden shadow-inner border-2 border-white">
+              {coach.avatar_url ? (
+                <img src={coach.avatar_url} alt={`Foto de ${coach.nombre}`} class="w-full h-full object-cover" />
+              ) : (
+                coach.nombre.charAt(0)
+              )}
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-1">{coach.nombre}</h3>
+            <p class="text-sm font-bold text-indigo-500 uppercase tracking-wider mb-6">{coach.especialidad || 'Coach Premium'}</p>
+            
+            <div class="mt-auto">
+              <div class="flex items-baseline gap-1 mb-6">
+                <span class="text-4xl font-black text-slate-900">S/{coach.precio_mensual}</span>
+                <span class="text-slate-500 font-medium">/mes</span>
+              </div>
+              <a 
+                href={`/checkout?coachId=${coach.id}&name=${encodeURIComponent(coach.nombre)}&price=${coach.precio_mensual}`}
+                class="block w-full py-4 text-center bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-colors"
+              >
+                Contratar Coach
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+    </div>
+  </main>
+</Layout>

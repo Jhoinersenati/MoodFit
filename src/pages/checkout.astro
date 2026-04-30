@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Checkout as CheckoutUI } from '../components/Checkout';
+
+const { searchParams } = Astro.url;
+const coachId = searchParams.get('coachId') || '';
+const name = searchParams.get('name') || 'Coach Personal';
+const price = searchParams.get('price') || '50.00';
+---
+
+<Layout title="Pago Seguro - Bio-Entrenador IA">
+  <main class="min-h-screen bg-slate-200 py-12 px-4 flex items-center justify-center">
+    {/* Botón de retroceso flotante */}
+    <a href="/coaches" class="absolute top-6 left-6 sm:top-10 sm:left-10 flex items-center gap-2 text-slate-600 font-bold hover:text-[#0b1f3d] transition-all bg-white/80 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-sm border border-slate-200 hover:-translate-x-1 hover:bg-white z-10">
+      <span class="text-xl leading-none">←</span>
+      Volver
+    </a>
+    <div class="w-full">
+      <CheckoutUI client:only="react" coachId={coachId} coachName={name} price={price} />
+    </div>
+  </main>
+</Layout>

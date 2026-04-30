@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CoachDashboard as DashboardUI } from '../components/CoachDashboard';
+---
+
+<Layout title="Panel de Coach - Bio-Entrenador IA">
+  <main class="min-h-screen bg-slate-100 py-12">
+    <div class="max-w-6xl mx-auto px-4 mb-8">
+      <h1 class="text-3xl font-black text-slate-800">Centro de Control</h1>
+      <p class="text-slate-500">Administra tus alumnos y tus ingresos.</p>
+    </div>
+    
+    <DashboardUI client:only="react" />
+  </main>
+</Layout>
