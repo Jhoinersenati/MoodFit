@@ -13,12 +13,44 @@ export const Checkout: React.FC<CheckoutProps> = ({ coachId, coachName, price })
   const [method, setMethod] = useState<'tarjeta' | 'yape'>('tarjeta');
   const [loading, setLoading] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
+  
+  // Estados para los campos de la tarjeta
+  const [cardNumber, setCardNumber] = useState('');
+  const [expiry, setExpiry] = useState('');
+  const [cvc, setCvc] = useState('');
+  const [cardHolder, setCardHolder] = useState('');
+  const [phone, setPhone] = useState('');
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => {
       if (data.user) setUserId(data.user.id);
     });
   }, []);
+
+  const formatCardNumber = (value: string) => {
+    const v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+    const matches = v.match(/\d{4,16}/g);
+    const match = matches && matches[0] || '';
+    const parts = [];
+
+    for (let i = 0, len = match.length; i < len; i += 4) {
+      parts.push(match.substring(i, i + 4));
+    }
+
+    if (parts.length) {
+      return parts.join(' ');
+    } else {
+      return v;
+    }
+  };
+
+  const formatExpiry = (value: string) => {
+    const v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+    if (v.length >= 2) {
+      return `${v.substring(0, 2)}/${v.substring(2, 4)}`;
+    }
+    return v;
+  };
 
   const handlePayment = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -128,21 +160,52 @@ export const Checkout: React.FC<CheckoutProps> = ({ coachId, coachName, price })
             <div className="space-y-4 animate-in fade-in duration-300">
               <div>
                 <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Número de Tarjeta</label>
-                <input type="text" placeholder="0000 0000 0000 0000" maxLength={19} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all font-mono" />
+                <input 
+                  type="text" 
+                  placeholder="0000 0000 0000 0000" 
+                  maxLength={19} 
+                  required 
+                  value={cardNumber}
+                  onChange={(e) => setCardNumber(formatCardNumber(e.target.value))}
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all font-mono" 
+                />
               </div>
               <div className="flex gap-4">
                 <div className="flex-1">
                   <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Vencimiento</label>
-                  <input type="text" placeholder="MM/AA" maxLength={5} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all font-mono" />
+                  <input 
+                    type="text" 
+                    placeholder="MM/AA" 
+                    maxLength={5} 
+                    required 
+                    value={expiry}
+                    onChange={(e) => setExpiry(formatExpiry(e.target.value))}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all font-mono" 
+                  />
                 </div>
                 <div className="flex-1">
                   <label className="block text-xs font-bold text-slate-500 uppercase mb-2">CVC</label>
-                  <input type="text" placeholder="123" maxLength={4} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all font-mono" />
+                  <input 
+                    type="text" 
+                    placeholder="123" 
+                    maxLength={4} 
+                    required 
+                    value={cvc}
+                    onChange={(e) => setCvc(e.target.value.replace(/[^0-9]/g, ''))}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all font-mono" 
+                  />
                 </div>
               </div>
               <div>
                 <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Titular de la Tarjeta</label>
-                <input type="text" placeholder="Juan Pérez" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" />
+                <input 
+                  type="text" 
+                  placeholder="Juan Pérez" 
+                  required 
+                  value={cardHolder}
+                  onChange={(e) => setCardHolder(e.target.value)}
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" 
+                />
               </div>
             </div>
           )}
@@ -157,7 +220,20 @@ export const Checkout: React.FC<CheckoutProps> = ({ coachId, coachName, price })
               
               <div>
                 <label className="block text-xs font-bold text-slate-500 uppercase mb-2 text-left">Número de celular asociado</label>
-                <input type="text" placeholder="999 888 777" maxLength={9} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 outline-none font-mono" />
+                <input 
+                  type="text" 
+                  placeholder="999 888 777" 
+                  maxLength={11} 
+                  required 
+                  value={phone}
+                  onChange={(e) => {
+                    const v = e.target.value.replace(/[^0-9]/g, '');
+                    if (v.length <= 9) {
+                      setPhone(v.replace(/(\d{3})(\d{3})(\d{3})/, '$1 $2 $3').trim());
+                    }
+                  }}
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 outline-none font-mono" 
+                />
               </div>
             </div>
           )}
@@ -169,7 +245,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ coachId, coachName, price })
             {loading ? (
               <span className="animate-pulse">Procesando pago...</span>
             ) : (
-              <>Pagar S/ {price} segurmanente <CheckCircle size={20} /></>
+              <>Pagar S/ {price} seguramente <CheckCircle size={20} /></>
             )}
           </button>
         </form>
